@@ -70,7 +70,7 @@ export function beginTyping() {
       }
       // Random delay between 20ms and 100ms for uneven typing pace
       if (!isFastForward) {
-        setTimeout(type, Math.random() * 80 + 20);
+        setTimeout(type, Math.random() * 30 + 20);
       } else {
         setTimeout(type, 1);
       }
