@@ -1,6 +1,7 @@
 import { sleep } from "./common";
 
-const isFastForward = false;
+// @ts-ignore
+const isFastForward = window.isFastForward;
 
 const part1StoryScripts = [
   {

@@ -1,4 +1,5 @@
-const isFastForward = false;
+// @ts-ignore
+const isFastForward = window.isFastForward;
 export const pretagCode = `    class FSDev extends FEDev implements BE, Devops {
     private _knowledge: string[] = [];
     private _isSelfTaught = true;
