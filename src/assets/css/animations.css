@@ -1,0 +1,139 @@
+.text-blurrying {
+    animation: text-blurry 2s ease-in-out infinite;
+  }
+
+.shaking {
+    animation: shaking 0.85s linear infinite;
+  }
+  .slide-left-right {
+    animation: slide-left-right 0.75s ease-out;
+    animation-fill-mode: forwards;
+  }
+  .slide-top-down {
+    animation: slide-top-down 0.75s ease-out;
+    animation-fill-mode: forwards;
+  }
+  .fall-down {
+    animation: fall-down 1s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fall-down {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fade-in-opacity-5 {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fade-in-opacity-5 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+.slide-away {
+  animation: slide-away 0.5s ease-in;
+  animation-fill-mode: forwards;
+}
+.fade-out {
+  opacity: 0;
+  animation: fade-out 0.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-away {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(+100%);
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slide-left-right {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-top-down {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes shaking {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-blurry {
+  0% {
+    opacity: 50%;
+    filter: blur(0px);
+  }
+  10% {
+    opacity: 60%;
+    filter: blur(6px) drop-shadow(0 0 2px white);
+  }
+  20% {
+    text-shadow: none;
+    opacity: 50%;
+    filter: blur(0px);
+  }
+  100% {
+    text-shadow: 0 0 0px white;
+    opacity: 50%;
+  }
+}

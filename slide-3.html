@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./src/assets/css/common.css" />
+    <link rel="stylesheet" href="./src/assets/css/loading.css" />
+    <link rel="stylesheet" href="./src/assets/css/animations.css" />
+    <title>Ethan Le - Projects</title>
+  <style>
+    .component-name {
+      font-weight: bold;
+    }
+    .component-description {
+    margin-bottom: 8px;
+    }
+    .slide-3{
+      background-image: url('./src/assets/images/uptime-bg.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="slide slide-3">
+        <div
+          class=""
+        >
+        <button onclick="window.location.href='./slide-2.html'" class="fixed bottom-9 left-1/2 -translate-x-1/2 text-white text-7xl opacity-50 blink z-10 back-button rotate-180 cursor-pointer translate-y-[4px]">
+          ➜
+        </button>
+        <button onclick="window.location.href='./index.html'" class="fixed top-2 right-2 text-white text-4xl opacity-50 blink z-10 reload-button cursor-pointer translate-y-[4px]">
+          ↻
+        </button>
+        </div>
+        <div class="content text-sm text-white">
+          <h1 class="text-2xl font-bold">Uptime monitoring system</h1>
+          <p class="ourpose text-sm italic mb-2">
+            A system that monitors the uptime of a website and sends alerts when it goes down.
+          </p>
+          <dl class="architecture-components">
+            <dt class="component-name">NestJS Server</dt>
+            <dd class="component-description">The central web API that handles all the requests from the clients as well as central orchestration of the monitoring system. </dd>
+            <dt class="component-name">Admin dashboard</dt>
+            <dd class="component-description">A dashboard for the admin to view the status of the monitoring system and to manage the users and the monitors.</dd>
+            <dt class="component-name">Mondo Database</dt>
+            <dd class="component-description">A central database to store the data of the monitoring system.</dd>
+            <dt class="component-name">Redis</dt>
+            <dd class="component-description">Central state storage for the whole microservice system.</dd>
+            <dt class="component-name">Check scheduler</dt>
+            <dd class="component-description">A cron job that create check jobs and orchestrate them to the queue.</dd>
+            <dt class="component-name">Check agents</dt>
+            <dd class="component-description">Workers hosted on cloud at multiple locations that runs the checks for the monitors.</dd>
+            <dt class="component-name">Result processor</dt>
+            <dd class="component-description">A worker that processes the results of the checks, fire outage alerts and stores check results in the database.</dd>
+            <dt class="component-name">Data aggregator</dt>
+            <dd class="component-description">A worker that aggregates the raw check results  to user friendly metrics.</dd>
+            <dt class="component-name">Grafana & Prometheus</dt>
+            <dd class="component-description">Monitor system health and metrics.</dd>
+            </dl>
+        </div>
+        <img src="./src/assets/images/uptime.svg" alt="uptime architecture" />
+      </div>
+    </div>
+  </body>
+</html>

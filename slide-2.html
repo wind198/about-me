@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./src/assets/css/common.css" />
+    <link rel="stylesheet" href="./src/assets/css/loading.css" />
+    <link rel="stylesheet" href="./src/assets/css/animations.css" />
+    <title>Ethan Le - Experience</title>
+    <style>
+      .slide-2 {
+        padding: 0 !important;
+        flex-direction: column;
+        height: fit-content;
+        background-color: #031c25;
+      }
+      .slide-2::-webkit-scrollbar {
+        display: none;
+      }
+      .part {
+        height: 100vh;
+        padding: 12px 32px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .part-1 {
+        background-image: url(./src/assets/images/slide-2-bg.jpeg);
+      }
+
+      .part-2 {
+        background-image: url(./src/assets/images/slide-2-bg-2.jpg);
+      }
+      .part-3 {
+        background-image: url(./src/assets/images/slide-2-bg-3.webp);
+      }
+      .part-1 .line {
+        line-height: 1.75;
+      }
+
+      .part-2 .content-item {
+        display: block;
+        aspect-ratio: 1 / 1;
+        background-color: #031c25;
+        color: white;
+        border-radius: 50%;
+        position: fixed;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        opacity: 70%;
+      }
+    
+      
+      .part-2 .content-item .content-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .part-2 .content-item .content-text {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .part-2 .content-item-0 {
+        top: 5%;
+        left: 5%;
+      }
+      .part-2 .content-item-1 {
+        top: 5%;
+        right: 5%;
+      }
+      .part-2 .content-item-2 {
+        bottom: 5%;
+        left: 7.5%;
+      }
+      .part-2 .content-item-3 {
+        bottom: 5%;
+        right: 7.5%;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="slide slide-2">
+        <div
+          class="nav-buttons fixed bottom-10 left-1/2 -translate-x-1/2 text-white text-7xl opacity-50 blink hidden  z-10 flex gap-4"
+        >
+        <button class="back-button rotate-180 cursor-pointer translate-y-[4px]">
+          ➜
+        </button>
+        <button class="next-button cursor-pointer">
+          ➜
+        </button>
+        </div>
+        <div
+          class="headline fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-10"
+        >
+          <h1
+            class="headline-text text-7xl font-bold text-gray-300 opacity-60 w-fit mx-auto text-left"
+          >
+            I can do it
+          </h1>
+        </div>
+        <div class="part part-1 w-full text-left">
+          <div class="story text-white py-4 z-20"></div>
+        </div>
+        <div class="part part-2 w-full text-left hidden">
+          <div class="content"></div>
+        </div>
+        <div class="part part-3 w-full text-left hidden">
+          <div class="progress-bar w-full relative flex flex-col justify-center gap-4">
+            <div class="indicator h-2 bg-yellow-300 rounded-full"></div>
+            <div class="content top-0 left-0 w-full h-full flex items-start justify-between"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/slide-2.ts"></script>
+  </body>
+</html>
